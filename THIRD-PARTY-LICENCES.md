@@ -12,8 +12,8 @@ declared licences and nothing else — no copyright holders, no licence
 texts, no URLs — so this file cannot discharge an attribution obligation
 and does not claim to. None is triggered: `vendor/` is untracked and
 nothing here publishes an image, so what this repository conveys is a
-lockfile *naming* third-party code rather than the code itself. The
-full-text version becomes correct the day something is actually
+lockfile *naming* these libraries rather than the libraries themselves.
+The full-text version becomes correct the day something is actually
 redistributed.
 
 **Production dependencies only** (`--no-dev`), because dev tooling is never

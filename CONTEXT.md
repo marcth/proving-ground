@@ -55,7 +55,7 @@ lockfile and drift-checked. An *inventory*, not a NOTICE: `composer licenses`
 carries no copyright holders and no licence texts, so it cannot discharge an
 attribution obligation. None is triggered — `vendor/` is untracked and nothing
 here publishes an image, so what this repository conveys is a lockfile naming
-third-party code rather than the code itself.
+these libraries rather than the libraries themselves.
 
 **Commit zero** — the first commit carrying any content. Not the root commit:
 the root commit is empty by construction.

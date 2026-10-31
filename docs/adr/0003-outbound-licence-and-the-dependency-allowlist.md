@@ -11,18 +11,32 @@ The ticket behind this record asked what a dependency-licence allowlist should
 contain. That question cannot be answered on its own terms. An allowlist is the
 set of **inbound** licences whose terms permit the combined work to be offered
 under the repository's **own** licence, so the outbound licence is upstream of
-it — and the outbound licence had never been decided. `LICENSE` arrived with
-the Laravel skeleton, had its copyright line edited, and no record stood behind
-it.
+it — and the outbound licence had never been decided.
+
+It was always this repository's to choose. **`laravel/laravel` deliberately
+ships no `LICENSE` file** — a project created from the skeleton is its author's
+own work to licence, which is why there was nothing to inherit and nothing to
+edit. Commit zero exercised that choice by writing an MIT `LICENSE` from
+scratch (`9e4880b`), and recorded no reason for it.
 
 The session that found this opened by justifying the gate as *homage*: a
 rendering of a control with no live obligation, since there is no deployed
 environment. **That framing was wrong and is retired.** This repository is
 public and is itself the conveyed artifact. What it does *not* convey is
-third-party code — `vendor/` is untracked, only `composer.lock` is committed,
-and nothing here publishes an image. So the thing conveyed is *a lockfile
-naming third-party code*, and the allowlist's function is real: it decides what
-a future `composer require` is allowed to bind this repository to.
+third-party **library** code — `vendor/` is untracked, only `composer.lock` is
+committed, and nothing here publishes an image.
+
+The skeleton is not a counter-example, though a reader checking this will find
+files in it byte-identical to `laravel/laravel` — `artisan`,
+`public/index.php`, an `AppServiceProvider` whose two methods are empty. A
+Laravel application *is* a template that composes its libraries and applies its
+own customisations on top; the template is given away without a licence file
+for exactly that reason, and a file still being identical means only that it
+has not needed changing yet.
+
+So the thing conveyed is *a lockfile naming third-party code*, and the
+allowlist's function is real: it decides what a future `composer require` is
+allowed to bind this repository to.
 
 One premise inherited from the ticket is corrected rather than carried.
 **A third-party inventory's force does not come from our outbound licence.** It
